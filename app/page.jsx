@@ -1,13 +1,25 @@
+// 4. Sections
+import HeroSection          from '@/components/sections/HeroSection'
+import ServicesSection      from '@/components/sections/ServicesSection'
+import AboutSection         from '@/components/sections/AboutSection'
+import GallerySection       from '@/components/sections/GallerySection'
+import TestimonialsSection  from '@/components/sections/TestimonialsSection'
+import FaqSection           from '@/components/sections/FaqSection'
+import ContactSection       from '@/components/sections/ContactSection'
+
 /**
- * Page principale — Site vitrine Moreau Peinture
- * Les sections seront intégrées phase par phase (Phase 3)
+ * Page principale — Site one-page Moreau Peinture
  */
 export default function Home() {
   return (
-    <main>
-      <p className="p-8 text-center text-zinc-500">
-        Moreau Peinture — setup OK, développement en cours.
-      </p>
-    </main>
+    <>
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <GallerySection />
+      <TestimonialsSection />
+      <FaqSection />
+      <ContactSection />
+    </>
   )
 }

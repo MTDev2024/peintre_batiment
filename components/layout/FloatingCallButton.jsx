@@ -13,9 +13,9 @@ export default function FloatingCallButton() {
       className={[
         'md:hidden fixed bottom-6 right-6 z-40',
         'flex items-center gap-2',
-        'bg-[var(--color-accent)] text-white',
+        'bg-accent text-white',
         'px-4 py-3 rounded-full shadow-lg',
-        'hover:bg-[var(--color-accent-hover)] transition-colors',
+        'hover:bg-(--color-accent-hover) transition-colors',
       ].join(' ')}
     >
       <svg

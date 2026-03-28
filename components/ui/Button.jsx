@@ -26,9 +26,9 @@ export default function Button({
 
   const variants = {
     primary:
-      'bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)]',
+      'bg-accent text-white hover:bg-(--color-accent-hover)',
     secondary:
-      'border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white',
+      'border border-accent text-accent hover:bg-accent hover:text-white',
     ghost:
       'text-neutral-700 hover:bg-neutral-100',
   }

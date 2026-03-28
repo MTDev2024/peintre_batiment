@@ -47,7 +47,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight">
           <span className="font-bold text-lg text-neutral-900">{siteConfig.name}</span>
-          <span className="text-xs text-[var(--color-accent)]">{siteConfig.baseline}</span>
+          <span className="text-xs text-accent">{siteConfig.baseline}</span>
         </Link>
 
         {/* Navigation desktop */}
@@ -56,7 +56,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-neutral-700 hover:text-[var(--color-accent)] transition-colors"
+              className="text-sm text-neutral-700 hover:text-accent transition-colors"
             >
               {link.label}
             </a>
@@ -110,7 +110,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="py-3 px-4 text-neutral-700 hover:text-[var(--color-accent)] hover:bg-neutral-50 rounded-md transition-colors"
+              className="py-3 px-4 text-neutral-700 hover:text-accent hover:bg-neutral-50 rounded-md transition-colors"
             >
               {link.label}
             </a>

@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Identité */}
           <div>
             <p className="font-bold text-white text-lg">{siteConfig.name}</p>
-            <p className="mt-1 text-sm text-[var(--color-accent)]">{siteConfig.baseline}</p>
+            <p className="mt-1 text-sm text-accent">{siteConfig.baseline}</p>
             <p className="mt-4 text-sm leading-relaxed">
               Artisan peintre certifié RGE à {siteConfig.city}.<br />
               Interventions dans toute la métropole lilloise.
