@@ -1,11 +1,13 @@
 // 1. Next.js
-import { Geist } from 'next/font/google'
-// 5. Styles
+import { DM_Sans } from 'next/font/google'
+// 2. Styles
 import '@/styles/globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// DM Sans — police principale titres + corps (Style B "Moderne Épuré")
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
   subsets: ['latin'],
+  display: 'swap',
 })
 
 export const metadata = {
@@ -26,7 +28,7 @@ export const metadata = {
  */
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="fr" className={`${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   )
