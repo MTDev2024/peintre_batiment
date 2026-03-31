@@ -1,35 +1,36 @@
-'use client'
+"use client";
 
 // 1. React
-import { useState } from 'react'
+import { useState } from "react";
 // 2. Next.js
-import Image from 'next/image'
+import Image from "next/image";
 // 3. Libs tierces
 // ⚠️ VÉRIFIER : API yet-another-react-lightbox v3 — syntaxe validée pour ^3.x
-import Lightbox from 'yet-another-react-lightbox'
-import 'yet-another-react-lightbox/styles.css'
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 // 5. Config et data
-import { siteConfig } from '@/config/site.config'
-import { galleryItems } from '@/data/gallery'
+import { siteConfig } from "@/config/site.config";
+import { galleryItems } from "@/data/gallery";
 
 /**
  * GallerySection — Galerie filtrée par catégorie avec lightbox
  * Client Component : gère le filtre actif et l'état ouvert/fermé de la lightbox.
  */
 export default function GallerySection() {
-  const [activeCategory, setActiveCategory] = useState('all')
-  const [lightboxOpen,   setLightboxOpen]   = useState(false)
-  const [lightboxIndex,  setLightboxIndex]  = useState(0)
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const filtered = activeCategory === 'all'
-    ? galleryItems
-    : galleryItems.filter((item) => item.category === activeCategory)
+  const filtered =
+    activeCategory === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
-  const slides = filtered.map((item) => ({ src: item.src, alt: item.title }))
+  const slides = filtered.map((item) => ({ src: item.src, alt: item.title }));
 
   function openLightbox(index) {
-    setLightboxIndex(index)
-    setLightboxOpen(true)
+    setLightboxIndex(index);
+    setLightboxOpen(true);
   }
 
   return (
@@ -39,7 +40,6 @@ export default function GallerySection() {
       className="py-20 bg-(--color-bg-subtle)"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* En-tête */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
@@ -49,7 +49,7 @@ export default function GallerySection() {
             Galerie de travaux
           </h2>
           <p className="mt-4 text-neutral-500 text-lg">
-            Découvrez une sélection de chantiers réalisés à Lille et dans la métropole.
+            Découvrez une sélection de chantiers réalisés autour de Dunkerque.
           </p>
         </div>
 
@@ -66,11 +66,11 @@ export default function GallerySection() {
               onClick={() => setActiveCategory(cat.id)}
               aria-pressed={activeCategory === cat.id}
               className={[
-                'px-4 py-2 rounded-full text-sm font-medium transition-colors',
+                "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                 activeCategory === cat.id
-                  ? 'bg-accent text-white'
-                  : 'bg-white text-neutral-600 border border-neutral-200 hover:border-accent hover:text-accent',
-              ].join(' ')}
+                  ? "bg-accent text-white"
+                  : "bg-white text-neutral-600 border border-neutral-200 hover:border-accent hover:text-accent",
+              ].join(" ")}
             >
               {cat.label}
             </button>
@@ -114,5 +114,5 @@ export default function GallerySection() {
         />
       </div>
     </section>
-  )
+  );
 }
